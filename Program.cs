@@ -1,4 +1,6 @@
-﻿using Game.PokerGame;
+﻿namespace Game;
+
+using Game.PokerGame;
 
 
 public class Program {
@@ -6,7 +8,7 @@ public class Program {
         List<string> playerNames1 = ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5", "Player 6", "Player 7", "Player 8"];
         List<string> playerNames2 = ["Player 3", "Player 4", "Player 3", "Player 4", "Player 5", "Player 6", "Player 7", "Player 8"];
 
-        PokerGame game = new(playerNames1);        
+        PokerGameSync game = new(playerNames1);        
         PokerGameAsync game2 = new(playerNames2);
         
         // Start both games concurrently

@@ -1,11 +1,11 @@
 namespace Game.PokerGame;
 
-public class PokerGame {
+public class PokerGameSync {
     readonly int TOTAL_CARDS_PER_HAND = 5;
     List<Player> Players{get; set;}    
     private readonly List<HandRank> allCombinations = [.. Enum.GetValues(typeof(HandRank)).Cast<HandRank>()];
 
-    public PokerGame(List<string> playerNames) {
+    public PokerGameSync(List<string> playerNames) {
         Players = [.. playerNames.Select(name => new Player(name))];
     }
 
