@@ -19,9 +19,7 @@ public class PokerGame {
             {
                 if (player.HasCompletedAllCombinations(allCombinations)) continue;
 
-                Console.WriteLine($"\n{player.Name}'s turn!");
                 var hand = deck.GetRandomCards(TOTAL_CARDS_PER_HAND);
-                PrintHand(hand);
 
                 player.Tries++;
 
@@ -31,10 +29,8 @@ public class PokerGame {
                 if (!player.CompletedCombinations.Contains(rank))
                 {
                     player.CompletedCombinations.Add(rank);
-                    Console.WriteLine($"Unlocked combination: {rank}");
                 }
 
-                Console.WriteLine($"Progress: {string.Join(", ", player.CompletedCombinations)}");
             }
         }
 
